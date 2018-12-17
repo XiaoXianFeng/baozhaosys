@@ -282,6 +282,74 @@ namespace Box
             get;
             set;
         }
+        //客户编码
+        public string Customer2NoSeq
+        {
+            get;
+            set;
+        }
+
+        public string Customer2No
+        {
+            get;
+            set;
+        }
+        public string Customer2NoBar
+        {
+            get;
+            set;
+        }
+        //建滔编码
+        public string JiantaoNoSeq
+        {
+            get;
+            set;
+        }
+
+        public string JiantaoNo
+        {
+            get;
+            set;
+        }
+        public string JiantaoNoBar
+        {
+            get;
+            set;
+        }
+        //备用选项1
+        public string Test1NoSeq
+        {
+            get;
+            set;
+        }
+
+        public string Test1No
+        {
+            get;
+            set;
+        }
+        public string Test1NoBar
+        {
+            get;
+            set;
+        }
+        //备用选项2
+        public string Test2NoSeq
+        {
+            get;
+            set;
+        }
+
+        public string Test2No
+        {
+            get;
+            set;
+        }
+        public string Test2NoBar
+        {
+            get;
+            set;
+        }
 
         private static readonly string FilePath = @".\Default.db";
 
@@ -351,6 +419,26 @@ namespace Box
             ShebeiNoSeq = ShebeiSeqTB.Text;
             ShebeiNo = ShebeiTB.Text;
             ShebeiNoBar = ShebeiCK.Checked ? "1" : "0";
+
+            //1
+            Customer2NoSeq = Customer2NoSeqTB.Text;
+            Customer2No = Customer2NoTB.Text;
+            Customer2NoBar = Customer2NoCK.Checked ? "1" : "0";
+
+            //2
+            JiantaoNoSeq = JiantaoNoSeqTB.Text;
+            JiantaoNo = JiantaoNoTB.Text;
+            JiantaoNoBar = JiantaoNoCK.Checked ? "1" : "0";
+
+            //3
+            Test1NoSeq = Test1NoSeqTB.Text;
+            Test1No = Test1NoTB.Text;
+            Test1NoBar = Test1NoCK.Checked ? "1" : "0";
+
+            //4
+            Test2NoSeq = Test2NoSeqTB.Text;
+            Test2No = Test2NoTB.Text;
+            Test2NoBar = Test2NoCK.Checked ? "1" : "0";
 
             SavePrintItem();
         }
@@ -471,6 +559,34 @@ namespace Box
                             command.Parameters["@DispSeq"].Value = String.IsNullOrEmpty(ShebeiNoSeq) ? 0 : Int32.Parse(ShebeiNoSeq);
                             command.Parameters["@DispText"].Value = ShebeiNo;
                             command.Parameters["@BarCode"].Value = ShebeiNoBar;
+                            command.ExecuteNonQuery();
+
+                            //1
+                            command.Parameters["@Name"].Value = "Customer2No";
+                            command.Parameters["@DispSeq"].Value = String.IsNullOrEmpty(Customer2NoSeq) ? 0 : Int32.Parse(Customer2NoSeq);
+                            command.Parameters["@DispText"].Value = Customer2No;
+                            command.Parameters["@BarCode"].Value = Customer2NoBar;
+                            command.ExecuteNonQuery();
+
+                            //2
+                            command.Parameters["@Name"].Value = "JiantaoNo";
+                            command.Parameters["@DispSeq"].Value = String.IsNullOrEmpty(JiantaoNoSeq) ? 0 : Int32.Parse(JiantaoNoSeq);
+                            command.Parameters["@DispText"].Value = JiantaoNo;
+                            command.Parameters["@BarCode"].Value = JiantaoNoBar;
+                            command.ExecuteNonQuery();
+
+                            //3
+                            command.Parameters["@Name"].Value = "Test1No";
+                            command.Parameters["@DispSeq"].Value = String.IsNullOrEmpty(Test1NoSeq) ? 0 : Int32.Parse(Test1NoSeq);
+                            command.Parameters["@DispText"].Value = Test1No;
+                            command.Parameters["@BarCode"].Value = Test1NoBar;
+                            command.ExecuteNonQuery();
+
+                            //4
+                            command.Parameters["@Name"].Value = "Test2No";
+                            command.Parameters["@DispSeq"].Value = String.IsNullOrEmpty(Test2NoSeq) ? 0 : Int32.Parse(Test2NoSeq);
+                            command.Parameters["@DispText"].Value = Test2No;
+                            command.Parameters["@BarCode"].Value = Test2NoBar;
                             command.ExecuteNonQuery();
                         }
                         trans.Commit();
@@ -664,6 +780,8 @@ namespace Box
                 FirmwareTB.Text = Firmware;
             }
             FirmwareCK.Checked = FirmwareBar == "1";
+            
+            //yanse
 
             ShebeiSeqTB.Text = ShebeiNoSeq;
 
@@ -673,15 +791,41 @@ namespace Box
             }
             ShebeiCK.Checked = ShebeiNoBar == "1";
 
-            /*
-             *  GubeiNoSeqTB.Text = GubeiNoSeq;
-            if (!String.IsNullOrEmpty(GubeiNo))
+            //1
+            Customer2NoSeqTB.Text = Customer2NoSeq;
+
+            if (!String.IsNullOrEmpty(Customer2No))
             {
-                GubeiNoTB.Text = GubeiNo;
+                Customer2NoTB.Text = Customer2No;
             }
-            
-            GubeiNoCK.Checked = GubeiNoBar == "1";
-             */
+            Customer2NoCK.Checked = Customer2NoBar == "1";
+
+            //2
+            JiantaoNoSeqTB.Text = JiantaoNoSeq;
+
+            if (!String.IsNullOrEmpty(JiantaoNo))
+            {
+                JiantaoNoTB.Text = JiantaoNo;
+            }
+            JiantaoNoCK.Checked = JiantaoNoBar == "1";
+
+            //3
+            Test1NoSeqTB.Text = Test1NoSeq;
+
+            if (!String.IsNullOrEmpty(Test1No))
+            {
+                Test1NoTB.Text = Test1No;
+            }
+            Test1NoCK.Checked = Test1NoBar == "1";
+
+            //4
+            Test2NoSeqTB.Text = Test2NoSeq;
+
+            if (!String.IsNullOrEmpty(Test2No))
+            {
+                Test2NoTB.Text = Test2No;
+            }
+            Test2NoCK.Checked = Test2NoBar == "1";
         }
 
         private void GetPrintItem()

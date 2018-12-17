@@ -91,6 +91,14 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.ShebeiTB = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Customer2NoTB = new System.Windows.Forms.TextBox();
+            this.JiantaoNoTB = new System.Windows.Forms.TextBox();
+            this.Test1NoTB = new System.Windows.Forms.TextBox();
+            this.Test2NoTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewLabel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -750,26 +758,98 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 551);
+            this.label19.Location = new System.Drawing.Point(13, 545);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 12);
+            this.label19.Size = new System.Drawing.Size(53, 12);
             this.label19.TabIndex = 67;
-            this.label19.Text = "订单设备数";
+            this.label19.Text = "标签颜色";
             // 
             // ShebeiTB
             // 
-            this.ShebeiTB.Location = new System.Drawing.Point(93, 542);
+            this.ShebeiTB.Location = new System.Drawing.Point(93, 540);
             this.ShebeiTB.Name = "ShebeiTB";
             this.ShebeiTB.Size = new System.Drawing.Size(375, 21);
             this.ShebeiTB.TabIndex = 68;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 579);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(53, 12);
+            this.label20.TabIndex = 67;
+            this.label20.Text = "客户code";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(13, 609);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 12);
+            this.label22.TabIndex = 67;
+            this.label22.Text = "建滔code";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 642);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 12);
+            this.label23.TabIndex = 67;
+            this.label23.Text = "备用选项1";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 672);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(59, 12);
+            this.label31.TabIndex = 67;
+            this.label31.Text = "备用选项2";
+            // 
+            // Customer2NoTB
+            // 
+            this.Customer2NoTB.Location = new System.Drawing.Point(93, 573);
+            this.Customer2NoTB.Name = "Customer2NoTB";
+            this.Customer2NoTB.Size = new System.Drawing.Size(375, 21);
+            this.Customer2NoTB.TabIndex = 68;
+            // 
+            // JiantaoNoTB
+            // 
+            this.JiantaoNoTB.Location = new System.Drawing.Point(93, 600);
+            this.JiantaoNoTB.Name = "JiantaoNoTB";
+            this.JiantaoNoTB.Size = new System.Drawing.Size(375, 21);
+            this.JiantaoNoTB.TabIndex = 68;
+            // 
+            // Test1NoTB
+            // 
+            this.Test1NoTB.Location = new System.Drawing.Point(93, 633);
+            this.Test1NoTB.Name = "Test1NoTB";
+            this.Test1NoTB.Size = new System.Drawing.Size(375, 21);
+            this.Test1NoTB.TabIndex = 68;
+            // 
+            // Test2NoTB
+            // 
+            this.Test2NoTB.Location = new System.Drawing.Point(93, 663);
+            this.Test2NoTB.Name = "Test2NoTB";
+            this.Test2NoTB.Size = new System.Drawing.Size(375, 21);
+            this.Test2NoTB.TabIndex = 68;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 572);
+            this.ClientSize = new System.Drawing.Size(986, 693);
+            this.Controls.Add(this.Test2NoTB);
+            this.Controls.Add(this.Test1NoTB);
+            this.Controls.Add(this.JiantaoNoTB);
+            this.Controls.Add(this.Customer2NoTB);
             this.Controls.Add(this.ShebeiTB);
             this.Controls.Add(this.FirmwareTB);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.TopMarginTB);
@@ -906,5 +986,13 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox ShebeiTB;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox Customer2NoTB;
+        private System.Windows.Forms.TextBox JiantaoNoTB;
+        private System.Windows.Forms.TextBox Test1NoTB;
+        private System.Windows.Forms.TextBox Test2NoTB;
     }
 }

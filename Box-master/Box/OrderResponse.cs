@@ -94,8 +94,32 @@ namespace Box
             get;
             set;
         }
-
+        //标签颜色
         public string count
+        {
+            get;
+            set;
+        }
+        //客户编码
+        public string abandoncount
+        {
+            get;
+            set;
+        }
+        //建滔编码
+        public string platcode
+        {
+            get;
+            set;
+        }
+        //备用选项1
+        public string repaircount
+        {
+            get;
+            set;
+        }
+        //备用选项2
+        public string failcount
         {
             get;
             set;

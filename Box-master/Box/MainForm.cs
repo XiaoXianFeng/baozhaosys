@@ -410,7 +410,31 @@ namespace Box
 
                         if (String.IsNullOrEmpty(res.OrderInfo.count))
                         {
-                            res.OrderInfo.ProductVerTag = GetDef(res.OrderInfo.OrderId, "ShebeiNo");
+                            res.OrderInfo.count = GetDef(res.OrderInfo.OrderId, "ShebeiNo");
+                        }
+                        OrderInfo = res.OrderInfo;
+
+                        if (String.IsNullOrEmpty(res.OrderInfo.abandoncount))
+                        {
+                            res.OrderInfo.abandoncount = GetDef(res.OrderInfo.OrderId, "Customer2No");
+                        }
+                        OrderInfo = res.OrderInfo;
+
+                        if (String.IsNullOrEmpty(res.OrderInfo.platcode))
+                        {
+                            res.OrderInfo.platcode = GetDef(res.OrderInfo.OrderId, "JiantaoNo");
+                        }
+                        OrderInfo = res.OrderInfo;
+
+                        if (String.IsNullOrEmpty(res.OrderInfo.repaircount))
+                        {
+                            res.OrderInfo.repaircount = GetDef(res.OrderInfo.OrderId, "Test1No");
+                        }
+                        OrderInfo = res.OrderInfo;
+
+                        if (String.IsNullOrEmpty(res.OrderInfo.failcount))
+                        {
+                            res.OrderInfo.failcount = GetDef(res.OrderInfo.OrderId, "Test2No");
                         }
                         OrderInfo = res.OrderInfo;
 
@@ -455,7 +479,20 @@ namespace Box
                 //固件
                 FirmwareTB.Text = orderInfo.Firmware;
                 //shebei
+                orderInfo.count = "";
                 ShebeiTB.Text = orderInfo.count;
+                //kwhucode
+               orderInfo.abandoncount = "";
+                Customer2NoTB.Text = orderInfo.abandoncount;
+                //jiantaocode
+               orderInfo.platcode = "";
+                JiantaoNoTB.Text = orderInfo.platcode;
+                //test1
+               orderInfo.repaircount = "";
+                Test1NoTB.Text = orderInfo.repaircount;
+                //test2
+                orderInfo.failcount = "";
+                Test2NoTB.Text = orderInfo.failcount;
             }), orderInfo);
         }
 
@@ -832,6 +869,30 @@ namespace Box
                         //shebei
                         Text = OrderInfo.count;
                     }
+
+                    else if (Name == "Customer2No")
+                    {
+                        //kehucode
+                        Text = OrderInfo.abandoncount;
+                    }
+
+                    else if (Name == "JiantaoNo")
+                    {
+                        //jiantaocode
+                        Text = OrderInfo.platcode;
+                    }
+
+                    else if (Name == "Test1No")
+                    {
+                        //test1
+                        Text = OrderInfo.repaircount;
+                    }
+
+                    else if (Name == "Test2No")
+                    {
+                        //test2
+                        Text = OrderInfo.failcount;
+                    }
                     g.DrawString(Disp, titleFont, textBrush, new RectangleF(left, top, WidthInPixel, HeightInPixel), titleFormat);
                     tmpSize = TextRenderer.MeasureText(g, Disp, titleFont);
                     int titleWidth = tmpSize.Width;
@@ -1119,6 +1180,10 @@ namespace Box
             OrderInfo.BatchNo = BatchTB.Text;
             OrderInfo.Firmware = FirmwareTB.Text;
             OrderInfo.count = ShebeiTB.Text;
+            OrderInfo.abandoncount = Customer2NoTB.Text;
+            OrderInfo.platcode = JiantaoNoTB.Text;
+            OrderInfo.repaircount = Test1NoTB.Text;
+            OrderInfo.failcount = Test2NoTB.Text;
             //保存打印默认值
             if (File.Exists(FilePath))
             {
@@ -1330,6 +1395,82 @@ namespace Box
                                     insCmd.Parameters["@ID"].Value = OrderInfo.OrderId;
                                     insCmd.Parameters["@Name"].Value = "ShebeiNo";
                                     insCmd.Parameters["@DefValue"].Value = ShebeiTB.Text;
+                                    insCmd.ExecuteNonQuery();
+                                }
+                            }
+                            //kehu
+                            command.Parameters["@Name"].Value = "Customer2No";
+                            command.Parameters["@DefValue"].Value = Customer2NoTB.Text;
+                            if (command.ExecuteNonQuery() == 0)
+                            {
+                                using (SQLiteCommand insCmd = conn.CreateCommand())
+                                {
+                                    insCmd.CommandText = "INSERT INTO Setting(Id, Name, DefValue) VALUES(@Id, @Name, @DefValue)";
+
+                                    insCmd.Parameters.Add("@DefValue", DbType.String);
+                                    insCmd.Parameters.Add("@Name", DbType.String);
+                                    insCmd.Parameters.Add("@ID", DbType.String);
+
+                                    insCmd.Parameters["@ID"].Value = OrderInfo.OrderId;
+                                    insCmd.Parameters["@Name"].Value = "Customer2No";
+                                    insCmd.Parameters["@DefValue"].Value = Customer2NoTB.Text;
+                                    insCmd.ExecuteNonQuery();
+                                }
+                            }
+                            //jiantao
+                            command.Parameters["@Name"].Value = "JiantaoNo";
+                            command.Parameters["@DefValue"].Value = JiantaoNoTB.Text;
+                            if (command.ExecuteNonQuery() == 0)
+                            {
+                                using (SQLiteCommand insCmd = conn.CreateCommand())
+                                {
+                                    insCmd.CommandText = "INSERT INTO Setting(Id, Name, DefValue) VALUES(@Id, @Name, @DefValue)";
+
+                                    insCmd.Parameters.Add("@DefValue", DbType.String);
+                                    insCmd.Parameters.Add("@Name", DbType.String);
+                                    insCmd.Parameters.Add("@ID", DbType.String);
+
+                                    insCmd.Parameters["@ID"].Value = OrderInfo.OrderId;
+                                    insCmd.Parameters["@Name"].Value = "JiantaoNo";
+                                    insCmd.Parameters["@DefValue"].Value = JiantaoNoTB.Text;
+                                    insCmd.ExecuteNonQuery();
+                                }
+                            }
+                            //test1
+                            command.Parameters["@Name"].Value = "Test1No";
+                            command.Parameters["@DefValue"].Value = Test1NoTB.Text;
+                            if (command.ExecuteNonQuery() == 0)
+                            {
+                                using (SQLiteCommand insCmd = conn.CreateCommand())
+                                {
+                                    insCmd.CommandText = "INSERT INTO Setting(Id, Name, DefValue) VALUES(@Id, @Name, @DefValue)";
+
+                                    insCmd.Parameters.Add("@DefValue", DbType.String);
+                                    insCmd.Parameters.Add("@Name", DbType.String);
+                                    insCmd.Parameters.Add("@ID", DbType.String);
+
+                                    insCmd.Parameters["@ID"].Value = OrderInfo.OrderId;
+                                    insCmd.Parameters["@Name"].Value = "Test1No";
+                                    insCmd.Parameters["@DefValue"].Value = Test1NoTB.Text;
+                                    insCmd.ExecuteNonQuery();
+                                }
+                            }
+                            //test2
+                            command.Parameters["@Name"].Value = "Test2No";
+                            command.Parameters["@DefValue"].Value = Test2NoTB.Text;
+                            if (command.ExecuteNonQuery() == 0)
+                            {
+                                using (SQLiteCommand insCmd = conn.CreateCommand())
+                                {
+                                    insCmd.CommandText = "INSERT INTO Setting(Id, Name, DefValue) VALUES(@Id, @Name, @DefValue)";
+
+                                    insCmd.Parameters.Add("@DefValue", DbType.String);
+                                    insCmd.Parameters.Add("@Name", DbType.String);
+                                    insCmd.Parameters.Add("@ID", DbType.String);
+
+                                    insCmd.Parameters["@ID"].Value = OrderInfo.OrderId;
+                                    insCmd.Parameters["@Name"].Value = "Test2No";
+                                    insCmd.Parameters["@DefValue"].Value = Test2NoTB.Text;
                                     insCmd.ExecuteNonQuery();
                                 }
                             }

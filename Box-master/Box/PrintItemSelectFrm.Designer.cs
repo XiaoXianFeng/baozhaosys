@@ -96,6 +96,22 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.ShebeiTB = new System.Windows.Forms.TextBox();
             this.ShebeiCK = new System.Windows.Forms.CheckBox();
+            this.Customer2NoSeqTB = new System.Windows.Forms.TextBox();
+            this.JiantaoNoSeqTB = new System.Windows.Forms.TextBox();
+            this.Test1NoSeqTB = new System.Windows.Forms.TextBox();
+            this.Test2NoSeqTB = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Customer2NoTB = new System.Windows.Forms.TextBox();
+            this.Customer2NoCK = new System.Windows.Forms.CheckBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.JiantaoNoTB = new System.Windows.Forms.TextBox();
+            this.Test1NoTB = new System.Windows.Forms.TextBox();
+            this.Test2NoTB = new System.Windows.Forms.TextBox();
+            this.JiantaoNoCK = new System.Windows.Forms.CheckBox();
+            this.Test1NoCK = new System.Windows.Forms.CheckBox();
+            this.Test2NoCK = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // OrderIdTB
@@ -168,7 +184,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 480);
+            this.label4.Location = new System.Drawing.Point(38, 577);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 12);
             this.label4.TabIndex = 77;
@@ -176,7 +192,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(102, 495);
+            this.button1.Location = new System.Drawing.Point(102, 604);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 23);
             this.button1.TabIndex = 76;
@@ -648,7 +664,7 @@
             // 
             // ShebeiSeqTB
             // 
-            this.ShebeiSeqTB.Location = new System.Drawing.Point(40, 432);
+            this.ShebeiSeqTB.Location = new System.Drawing.Point(40, 423);
             this.ShebeiSeqTB.MaxLength = 2;
             this.ShebeiSeqTB.Name = "ShebeiSeqTB";
             this.ShebeiSeqTB.Size = new System.Drawing.Size(32, 21);
@@ -656,41 +672,193 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(102, 432);
+            this.textBox4.Location = new System.Drawing.Point(102, 423);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(143, 21);
             this.textBox4.TabIndex = 104;
-            this.textBox4.Text = "订单设备数";
+            this.textBox4.Text = "标签颜色";
             // 
             // ShebeiTB
             // 
-            this.ShebeiTB.Location = new System.Drawing.Point(261, 432);
+            this.ShebeiTB.Location = new System.Drawing.Point(261, 423);
             this.ShebeiTB.Name = "ShebeiTB";
             this.ShebeiTB.Size = new System.Drawing.Size(136, 21);
             this.ShebeiTB.TabIndex = 105;
-            this.ShebeiTB.Text = "订单设备数:";
+            this.ShebeiTB.Text = "标签颜色:";
             // 
             // ShebeiCK
             // 
             this.ShebeiCK.AutoSize = true;
-            this.ShebeiCK.Location = new System.Drawing.Point(414, 439);
+            this.ShebeiCK.Location = new System.Drawing.Point(414, 426);
             this.ShebeiCK.Name = "ShebeiCK";
             this.ShebeiCK.Size = new System.Drawing.Size(15, 14);
             this.ShebeiCK.TabIndex = 106;
             this.ShebeiCK.UseVisualStyleBackColor = true;
             // 
+            // Customer2NoSeqTB
+            // 
+            this.Customer2NoSeqTB.Location = new System.Drawing.Point(40, 450);
+            this.Customer2NoSeqTB.MaxLength = 2;
+            this.Customer2NoSeqTB.Name = "Customer2NoSeqTB";
+            this.Customer2NoSeqTB.Size = new System.Drawing.Size(32, 21);
+            this.Customer2NoSeqTB.TabIndex = 103;
+            // 
+            // JiantaoNoSeqTB
+            // 
+            this.JiantaoNoSeqTB.Location = new System.Drawing.Point(40, 486);
+            this.JiantaoNoSeqTB.MaxLength = 2;
+            this.JiantaoNoSeqTB.Name = "JiantaoNoSeqTB";
+            this.JiantaoNoSeqTB.Size = new System.Drawing.Size(32, 21);
+            this.JiantaoNoSeqTB.TabIndex = 103;
+            // 
+            // Test1NoSeqTB
+            // 
+            this.Test1NoSeqTB.Location = new System.Drawing.Point(40, 513);
+            this.Test1NoSeqTB.MaxLength = 2;
+            this.Test1NoSeqTB.Name = "Test1NoSeqTB";
+            this.Test1NoSeqTB.Size = new System.Drawing.Size(32, 21);
+            this.Test1NoSeqTB.TabIndex = 103;
+            // 
+            // Test2NoSeqTB
+            // 
+            this.Test2NoSeqTB.Location = new System.Drawing.Point(40, 540);
+            this.Test2NoSeqTB.MaxLength = 2;
+            this.Test2NoSeqTB.Name = "Test2NoSeqTB";
+            this.Test2NoSeqTB.Size = new System.Drawing.Size(32, 21);
+            this.Test2NoSeqTB.TabIndex = 103;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(102, 450);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(143, 21);
+            this.textBox10.TabIndex = 104;
+            this.textBox10.Text = "客户code";
+            // 
+            // Customer2NoTB
+            // 
+            this.Customer2NoTB.Location = new System.Drawing.Point(261, 450);
+            this.Customer2NoTB.Name = "Customer2NoTB";
+            this.Customer2NoTB.Size = new System.Drawing.Size(136, 21);
+            this.Customer2NoTB.TabIndex = 105;
+            this.Customer2NoTB.Text = "客户code:";
+            // 
+            // Customer2NoCK
+            // 
+            this.Customer2NoCK.AutoSize = true;
+            this.Customer2NoCK.Location = new System.Drawing.Point(414, 457);
+            this.Customer2NoCK.Name = "Customer2NoCK";
+            this.Customer2NoCK.Size = new System.Drawing.Size(15, 14);
+            this.Customer2NoCK.TabIndex = 106;
+            this.Customer2NoCK.UseVisualStyleBackColor = true;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(102, 486);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(143, 21);
+            this.textBox13.TabIndex = 104;
+            this.textBox13.Text = "建滔code";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(103, 513);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(143, 21);
+            this.textBox15.TabIndex = 104;
+            this.textBox15.Text = "备用选项1";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(102, 540);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(143, 21);
+            this.textBox16.TabIndex = 104;
+            this.textBox16.Text = "备用选项2";
+            // 
+            // JiantaoNoTB
+            // 
+            this.JiantaoNoTB.Location = new System.Drawing.Point(262, 486);
+            this.JiantaoNoTB.Name = "JiantaoNoTB";
+            this.JiantaoNoTB.Size = new System.Drawing.Size(136, 21);
+            this.JiantaoNoTB.TabIndex = 105;
+            this.JiantaoNoTB.Text = "建滔code:";
+            // 
+            // Test1NoTB
+            // 
+            this.Test1NoTB.Location = new System.Drawing.Point(261, 513);
+            this.Test1NoTB.Name = "Test1NoTB";
+            this.Test1NoTB.Size = new System.Drawing.Size(136, 21);
+            this.Test1NoTB.TabIndex = 105;
+            this.Test1NoTB.Text = "添加选项1:";
+            // 
+            // Test2NoTB
+            // 
+            this.Test2NoTB.Location = new System.Drawing.Point(261, 540);
+            this.Test2NoTB.Name = "Test2NoTB";
+            this.Test2NoTB.Size = new System.Drawing.Size(136, 21);
+            this.Test2NoTB.TabIndex = 105;
+            this.Test2NoTB.Text = "添加选项2:";
+            // 
+            // JiantaoNoCK
+            // 
+            this.JiantaoNoCK.AutoSize = true;
+            this.JiantaoNoCK.Location = new System.Drawing.Point(414, 493);
+            this.JiantaoNoCK.Name = "JiantaoNoCK";
+            this.JiantaoNoCK.Size = new System.Drawing.Size(15, 14);
+            this.JiantaoNoCK.TabIndex = 106;
+            this.JiantaoNoCK.UseVisualStyleBackColor = true;
+            // 
+            // Test1NoCK
+            // 
+            this.Test1NoCK.AutoSize = true;
+            this.Test1NoCK.Location = new System.Drawing.Point(414, 516);
+            this.Test1NoCK.Name = "Test1NoCK";
+            this.Test1NoCK.Size = new System.Drawing.Size(15, 14);
+            this.Test1NoCK.TabIndex = 106;
+            this.Test1NoCK.UseVisualStyleBackColor = true;
+            // 
+            // Test2NoCK
+            // 
+            this.Test2NoCK.AutoSize = true;
+            this.Test2NoCK.Location = new System.Drawing.Point(414, 547);
+            this.Test2NoCK.Name = "Test2NoCK";
+            this.Test2NoCK.Size = new System.Drawing.Size(15, 14);
+            this.Test2NoCK.TabIndex = 106;
+            this.Test2NoCK.UseVisualStyleBackColor = true;
+            // 
             // PrintItemSelectFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 521);
+            this.ClientSize = new System.Drawing.Size(466, 632);
+            this.Controls.Add(this.Test2NoCK);
+            this.Controls.Add(this.Test1NoCK);
+            this.Controls.Add(this.JiantaoNoCK);
+            this.Controls.Add(this.Customer2NoCK);
             this.Controls.Add(this.ShebeiCK);
             this.Controls.Add(this.FirmwareCK);
+            this.Controls.Add(this.Test2NoTB);
+            this.Controls.Add(this.Test1NoTB);
+            this.Controls.Add(this.JiantaoNoTB);
+            this.Controls.Add(this.Customer2NoTB);
             this.Controls.Add(this.ShebeiTB);
             this.Controls.Add(this.FirmwareTB);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textbox1);
+            this.Controls.Add(this.Test2NoSeqTB);
+            this.Controls.Add(this.Test1NoSeqTB);
+            this.Controls.Add(this.JiantaoNoSeqTB);
+            this.Controls.Add(this.Customer2NoSeqTB);
             this.Controls.Add(this.ShebeiSeqTB);
             this.Controls.Add(this.FirmwareSeqTB);
             this.Controls.Add(this.WorkFlowCK);
@@ -833,5 +1001,21 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox ShebeiTB;
         private System.Windows.Forms.CheckBox ShebeiCK;
+        private System.Windows.Forms.TextBox Customer2NoSeqTB;
+        private System.Windows.Forms.TextBox JiantaoNoSeqTB;
+        private System.Windows.Forms.TextBox Test1NoSeqTB;
+        private System.Windows.Forms.TextBox Test2NoSeqTB;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Customer2NoTB;
+        private System.Windows.Forms.CheckBox Customer2NoCK;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox JiantaoNoTB;
+        private System.Windows.Forms.TextBox Test1NoTB;
+        private System.Windows.Forms.TextBox Test2NoTB;
+        private System.Windows.Forms.CheckBox JiantaoNoCK;
+        private System.Windows.Forms.CheckBox Test1NoCK;
+        private System.Windows.Forms.CheckBox Test2NoCK;
     }
 }
